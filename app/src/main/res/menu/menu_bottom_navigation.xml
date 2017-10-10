@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/id_menu_bn_user"
+        android:title="@string/str_menu_bn_user"
+        android:icon="@drawable/user_48" />
+    <item
+        android:id="@+id/id_menu_bn_comment"
+        android:title="@string/str_menu_bn_comment"
+        android:icon="@drawable/comment_48" />
+</menu>
