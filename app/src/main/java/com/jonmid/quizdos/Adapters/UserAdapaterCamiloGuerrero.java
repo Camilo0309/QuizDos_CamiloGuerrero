@@ -32,7 +32,7 @@ public class UserAdapaterCamiloGuerrero  extends RecyclerView.Adapter<UserAdapat
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 // Configuracion del ViewAdapter
 // Obtener la vista (item.xml)
-        View item = LayoutInflater.from(parent.getContext()).inflate(R.layout.fragment_user, parent, false);
+        View item = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_user, parent, false);
 // Pasar la vista (item.xml) al ViewHolder
         ViewHolder viewHolder = new ViewHolder(item);
         return viewHolder;
@@ -59,11 +59,11 @@ public class UserAdapaterCamiloGuerrero  extends RecyclerView.Adapter<UserAdapat
         public ViewHolder(View item) {
             super(item);
             textViewName = (TextView) item.findViewById(R.id.id_tv_userinput_name);
-            textusername = (TextView) item.findViewById(R.id.id_tv_userinput_name);
-            textemail = (TextView) item.findViewById(R.id.id_tv_userinput_name);
-            textphone = (TextView) item.findViewById(R.id.id_tv_userinput_name);
-            textnamecompany = (TextView) item.findViewById(R.id.id_tv_userinput_name);
-            textaddress = (TextView) item.findViewById(R.id.id_tv_userinput_name);
+            textusername = (TextView) item.findViewById(R.id.id_tv_userinput_username);
+            textemail = (TextView) item.findViewById(R.id.id_tv_userinput_email);
+            textphone = (TextView) item.findViewById(R.id.id_tv_userinput_phone);
+            textnamecompany = (TextView) item.findViewById(R.id.id_tv_userinput_namecompany);
+            textaddress = (TextView) item.findViewById(R.id.id_tv_userinput_address);
 
 
         }

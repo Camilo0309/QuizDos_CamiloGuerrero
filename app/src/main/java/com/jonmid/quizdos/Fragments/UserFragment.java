@@ -12,6 +12,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.jonmid.quizdos.Adapters.UserAdapaterCamiloGuerrero;
@@ -34,6 +35,7 @@ public class UserFragment extends Fragment {
     UserAdapaterCamiloGuerrero userAdapaterCamiloGuerrero;
     List<UserModelCamiloGuerrero> userModelCamiloGuerreroList;
     RecyclerView recyclerView;
+    ProgressBar progressBar;
 
 
 
@@ -74,13 +76,18 @@ public class UserFragment extends Fragment {
         @Override
         protected void onPostExecute(String s) {
             super.onPostExecute(s);
+            try {
+                userModelCamiloGuerreroList = UserJsonCamiloGuerrero.getData(s);
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+            processData();
+            progressBar.setVisibility(View.GONE);
+            super.onPostExecute(s);
+
 
         }
     }
-
-
-
-
 
 
     public void processData(){
