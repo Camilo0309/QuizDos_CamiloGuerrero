@@ -21,6 +21,7 @@ public class UserJsonCamiloGuerrero {
         for (int i = 0; i < jsonArray.length(); i++){
             JSONObject item = jsonArray.getJSONObject(i);
             UserModelCamiloGuerrero userModelCamiloGuerrero = new UserModelCamiloGuerrero();
+
             userModelCamiloGuerrero.setName(item.getString("name"));
             userModelCamiloGuerrero.setUsername(item.getString("username"));
             userModelCamiloGuerrero.setEmail(item.getString("email"));
@@ -28,13 +29,15 @@ public class UserJsonCamiloGuerrero {
             JSONObject company = item.getJSONObject("company");
             company.getString("name");
             JSONObject address = item.getJSONObject("address");
+            address.getString("street");
 
 
 
 
-            photosList.add(photos);
+
+            userModelCamiloGuerreroList.add(userModelCamiloGuerrero);
         }
-        return photosList;
+        return userModelCamiloGuerreroList;
     }
 
 }
